@@ -2,11 +2,11 @@
 <Books>
 <Book>
 <Fields>
-<Field field="author" isAccessible="false" type="String"/>
-<Field field="title" isAccessible="false" type="String"/>
-<Field field="year" isAccessible="false" type="int"/>
-<Field field="isbn" isAccessible="false" type="String"/>
-<Field field="serialVersionUID" isAccessible="false" type="long"/>
+<Field field="author" isAccessible="false" type="String" value1="Schildt"/>
+<Field field="title" isAccessible="false" type="String" value1="Intro to Java"/>
+<Field field="year" isAccessible="false" type="int" value1="2017"/>
+<Field field="isbn" isAccessible="false" type="String" value1="1241241ada"/>
+<Field field="serialVersionUID" isAccessible="false" type="long" value1="2"/>
 </Fields>
 <Methods>
 <Method method="equals"/>

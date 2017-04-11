@@ -52,7 +52,7 @@ public class BookXml
 
 
 
-
+            
 
             for (Field field:Class.forName("library.models.Book").getDeclaredFields()
                  ) {
@@ -70,6 +70,13 @@ public class BookXml
                 Attr attrType = doc.createAttribute("type");
                 attrType.setValue(field.getType().getSimpleName());
                 elementField.setAttributeNode(attrType);
+
+                Object obj = new Object();
+                field.setAccessible(true);
+                obj = field.get(book1);
+                Attr attrValue = doc.createAttribute("value1");
+                attrValue.setValue(obj.toString());
+                elementField.setAttributeNode(attrValue);
             }
 
 
