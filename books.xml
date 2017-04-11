@@ -2,10 +2,10 @@
 <Books>
 <Book>
 <Fields>
-<Field field="author" isAccessible="false" type="java.lang.String"/>
-<Field field="title" isAccessible="false" type="java.lang.String"/>
+<Field field="author" isAccessible="false" type="String"/>
+<Field field="title" isAccessible="false" type="String"/>
 <Field field="year" isAccessible="false" type="int"/>
-<Field field="isbn" isAccessible="false" type="java.lang.String"/>
+<Field field="isbn" isAccessible="false" type="String"/>
 <Field field="serialVersionUID" isAccessible="false" type="long"/>
 </Fields>
 <Methods>

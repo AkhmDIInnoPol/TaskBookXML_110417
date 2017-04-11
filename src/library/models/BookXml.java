@@ -68,7 +68,7 @@ public class BookXml
                 elementField.setAttributeNode(attrAccess);
 
                 Attr attrType = doc.createAttribute("type");
-                attrType.setValue(field.getType().getName());
+                attrType.setValue(field.getType().getSimpleName());
                 elementField.setAttributeNode(attrType);
             }
 
