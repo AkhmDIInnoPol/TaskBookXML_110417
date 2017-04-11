@@ -52,7 +52,8 @@ public class BookXml
 
 
 
-            
+            int fieldBook2Counter = 0;
+            Field[] fieldsBook2 = book2.getClass().getDeclaredFields();
 
             for (Field field:Class.forName("library.models.Book").getDeclaredFields()
                  ) {
@@ -74,9 +75,16 @@ public class BookXml
                 Object obj = new Object();
                 field.setAccessible(true);
                 obj = field.get(book1);
-                Attr attrValue = doc.createAttribute("value1");
-                attrValue.setValue(obj.toString());
-                elementField.setAttributeNode(attrValue);
+                Attr attrValue1 = doc.createAttribute("value1");
+                attrValue1.setValue(obj.toString());
+                elementField.setAttributeNode(attrValue1);
+
+                fieldsBook2[fieldBook2Counter].setAccessible(true);
+                obj = fieldsBook2[fieldBook2Counter].get(book2);
+                Attr attrValue2 = doc.createAttribute("value2");
+                attrValue2.setValue(obj.toString());
+                elementField.setAttributeNode(attrValue2);
+                fieldBook2Counter++;
             }
 
 

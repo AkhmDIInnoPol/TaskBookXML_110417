@@ -2,19 +2,19 @@
 <Books>
 <Book>
 <Fields>
-<Field field="author" isAccessible="false" type="String" value1="Schildt"/>
-<Field field="title" isAccessible="false" type="String" value1="Intro to Java"/>
-<Field field="year" isAccessible="false" type="int" value1="2017"/>
-<Field field="isbn" isAccessible="false" type="String" value1="1241241ada"/>
-<Field field="serialVersionUID" isAccessible="false" type="long" value1="2"/>
+<Field field="author" isAccessible="false" type="String" value1="Schildt" value2="Snowden"/>
+<Field field="title" isAccessible="false" type="String" value1="Intro to Java" value2="How to hack Pentagon"/>
+<Field field="year" isAccessible="false" type="int" value1="2017" value2="2015"/>
+<Field field="isbn" isAccessible="false" type="String" value1="1241241ada" value2="54524dfh"/>
+<Field field="serialVersionUID" isAccessible="false" type="long" value1="2" value2="2"/>
 </Fields>
 <Methods>
 <Method method="equals"/>
 <Method method="toString"/>
 <Method method="hashCode"/>
+<Method method="getIsbn"/>
 <Method method="getAuthor"/>
 <Method method="getYear"/>
-<Method method="getIsbn"/>
 <Method method="getTitle"/>
 <Method method="wait"/>
 <Method method="wait"/>
