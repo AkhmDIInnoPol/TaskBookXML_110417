@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Books><Book><Fields><Field field="author"/><Field field="title"/><Field field="year"/><Field field="isbn"/><Field field="serialVersionUID"/></Fields><Methods><Method method="equals"/><Method method="toString"/><Method method="hashCode"/><Method method="getAuthor"/><Method method="getYear"/><Method method="getIsbn"/><Method method="getTitle"/><Method method="wait"/><Method method="wait"/><Method method="wait"/><Method method="getClass"/><Method method="notify"/><Method method="notifyAll"/></Methods></Book></Books>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Books>
+<Book>
+<Fields>
+<Field field="author" isAccessible="false" type="java.lang.String"/>
+<Field field="title" isAccessible="false" type="java.lang.String"/>
+<Field field="year" isAccessible="false" type="int"/>
+<Field field="isbn" isAccessible="false" type="java.lang.String"/>
+<Field field="serialVersionUID" isAccessible="false" type="long"/>
+</Fields>
+<Methods>
+<Method method="equals"/>
+<Method method="toString"/>
+<Method method="hashCode"/>
+<Method method="getAuthor"/>
+<Method method="getYear"/>
+<Method method="getIsbn"/>
+<Method method="getTitle"/>
+<Method method="wait"/>
+<Method method="wait"/>
+<Method method="wait"/>
+<Method method="getClass"/>
+<Method method="notify"/>
+<Method method="notifyAll"/>
+</Methods>
+</Book>
+</Books>

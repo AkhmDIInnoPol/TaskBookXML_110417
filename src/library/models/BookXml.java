@@ -5,6 +5,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -28,7 +29,8 @@ public class BookXml
     {
 
 
-        Book book = new Book("","", 0, "");
+        Book book1 = new Book("Schildt","Intro to Java", 2017, "1241241ada");
+        Book book2 = new Book("Snowden","How to hack Pentagon", 2015, "54524dfh");
 
         try {
             DocumentBuilderFactory dbFactory =
@@ -39,6 +41,7 @@ public class BookXml
 
             Element rootElement = doc.createElement("Books");
             doc.appendChild(rootElement);
+
 
             //  Book element
             Element bookElement = doc.createElement("Book");
@@ -59,13 +62,26 @@ public class BookXml
                 Attr attr = doc.createAttribute("field");
                 attr.setValue(field.getName());
                 elementField.setAttributeNode(attr);
+
+                Attr attrAccess = doc.createAttribute("isAccessible");
+                attrAccess.setValue(Boolean.toString(field.isAccessible()));
+                elementField.setAttributeNode(attrAccess);
+
+                Attr attrType = doc.createAttribute("type");
+                attrType.setValue(field.getType().getName());
+                elementField.setAttributeNode(attrType);
             }
+
+
+
+
+
 
             Element methods = doc.createElement("Methods");
             bookElement.appendChild(methods);
 
 
-            for (Method method:book.getClass().getMethods()
+            for (Method method:book1.getClass().getMethods()
                     ) {
                 Element elementMethod = doc.createElement("Method");
                 methods.appendChild(elementMethod);
@@ -80,6 +96,9 @@ public class BookXml
                     TransformerFactory.newInstance();
             Transformer transformer =
                     transformerFactory.newTransformer();
+
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
             DOMSource source = new DOMSource(doc);
             StreamResult result =
                     new StreamResult(new File("books.xml"));
